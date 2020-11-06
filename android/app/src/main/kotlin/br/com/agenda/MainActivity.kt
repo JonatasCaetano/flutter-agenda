@@ -1,4 +1,4 @@
-package br.com.contatos
+package br.com.agenda
 
 import io.flutter.embedding.android.FlutterActivity
 
