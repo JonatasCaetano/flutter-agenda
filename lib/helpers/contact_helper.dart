@@ -27,8 +27,8 @@ class ContactHelper {
   }
 
   Future<Database> initDb()async{
-    final DatabasePath = await getDatabasesPath();
-    final path = join(DatabasePath, 'contacts.db');
+    final databasePath = await getDatabasesPath();
+    final path = join(databasePath, 'contacts.db');
     return await openDatabase(path, version: 1, onCreate: (Database db, int newerVersion)async{
       await db.execute(
         "CREATE TABLE $contactTable($idColumn INTEGER PRIMARY KEY, $nameColumn TEXT, $emailColumn TEXT, $phoneColumn TEXT, $imgColumn TEXT)"
